@@ -1,14 +1,19 @@
 <h1>All Flats</h1>
 <% @flats.each do |flat| %>
 <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-4 col-sm-4">
-        <h2><%= flat.name %></h2>
-        <p><%= "Address: #{flat.address}" %></p>
-        <p><%= flat.description %></p>
-        <p> <%= flat.price_per_night %><p>
-        <p><i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
-      </div>
+ <div class="row justify-content-center">
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= "Address: #{flat.address}" %></p>
+        <p class="card-text"><%= flat.description %></p>
+        <p class="card-text"><%= flat.price_per_night %><p>
+        <p class="card-text"><i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
+        </div>
+        </div>
     </div>
+ </div>
+
 </div>
 <% end%>

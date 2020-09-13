@@ -12,15 +12,44 @@ Flat.destroy_all
 
 puts "Creating flats..."
 
-5.times do
-    flat = Flat.new(
-        name: Faker::Address.street_name,
+    Flat.create!(
+        name: "Light & Spacious Garden Flat London",
         address: Faker::Address.full_address,
-        description: Faker::Restaurant.description ,
+        description: "A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory",
         price_per_night: 350,
         number_of_guests: rand(1..6)
     )
-    flat.save!
-end
-
+    
+    Flat.create!(
+        name: "Stylish House Close To River",
+        address: Faker::Address.full_address,
+        description: "Cosy and quiet" ,
+        price_per_night: 350,
+        number_of_guests: rand(1..6)
+    )
+    
+    Flat.create!(
+        name: "Surrounded by beutiful Greenary",
+        address: Faker::Address.full_address,
+        description: "5 minute walk to the train station and 3 minutes to catch a bus." ,
+        price_per_night: 350,
+        number_of_guests: rand(1..6)
+    )
+    
+    Flat.create!(
+        name: "Beautiful City View in a Contemporary Apartment",
+        address: Faker::Address.full_address,
+        description: "Easy to access Melbourne's festivities.",
+        price_per_night: 350,
+        number_of_guests: rand(1..6)
+    )
+    
+    Flat.create!(
+        name: "Country Style Farm House",
+        address: Faker::Address.full_address,
+        description: "Frolic on the fields.",
+        price_per_night: 350,
+        number_of_guests: rand(1..6)
+    )
+    
 puts "Created #{Flat.count} flat(s)"
