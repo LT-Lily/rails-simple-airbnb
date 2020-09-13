@@ -1,0 +1,14 @@
+<h1>All Flats</h1>
+<% @flats.each do |flat| %>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4 col-sm-4">
+        <h2><%= flat.name %></h2>
+        <p><%= "Address: #{flat.address}" %></p>
+        <p><%= flat.description %></p>
+        <p> <%= flat.price_per_night %><p>
+        <p><i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
+      </div>
+    </div>
+</div>
+<% end%>
